@@ -1,0 +1,25 @@
+#container {
+    display: flex; 
+    flex-direction: column; 
+    width: 200px; 
+}
+
+#label-name {
+    margin-right: 5px; 
+}
+
+#label-email {
+    margin-right: 5px; 
+    margin-top: 7px; 
+}
+
+#label-phone {
+    margin-right: 5px; 
+    margin-top: 7px; 
+}
+
+#button-submit {
+    width: 100px; 
+    margin: 0 auto; 
+    margin-top: 10px; 
+}
