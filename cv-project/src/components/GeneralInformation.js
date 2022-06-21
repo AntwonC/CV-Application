@@ -1,3 +1,7 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+/* eslint-disable spaced-comment */
+/* eslint-disable no-useless-constructor */
 /* eslint-disable react/no-unused-class-component-methods */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/no-unused-state */
@@ -7,47 +11,27 @@ import '../styles/generalInformation.css';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class GeneralInformationSection extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      nameInput: '',
-      emailInput: '',
-      phoneInput: '',
-    };
-
-    // this.handleInput = this.handleInput.bind(this);
-  }
-
   // eslint-disable-next-line class-methods-use-this
-  handleClick = (e) => {
-    e.preventDefault();
-
-    console.log('Submitted data!');
-  };
-
-  handleInput = (evt) => {
-    console.log(evt.target.name);
-    this.setState(() => ({
-      [evt.target.name]: evt.target.value,
-    }));
-  };
 
   render() {
+    const {
+      name, email, phone, disabled,
+    } = this.props;
+
     return (
       <div id="container">
         <label htmlFor="name" id="label-name">Full Name</label>
-        <input type="text" id="name" name="nameInput" onChange={this.handleInput} />
+        <input type="text" id="name" name="nameInput" disabled={disabled} onChange={this.props.inputChange} />
         <label htmlFor="email" id="label-email">Email</label>
-        <input type="email" id="email" placeholder="placeholder@gmail.com" name="emailInput" onChange={this.handleInput} />
+        <input type="email" id="email" placeholder="placeholder@gmail.com" name="emailInput" disabled={disabled} onChange={this.props.inputChange} />
         <label htmlFor="phone" id="label-phone">Phone</label>
-        <input type="tel" id="phone" placeholder="999-999-9999" name="phoneInput" onChange={this.handleInput} />
+        <input type="tel" id="phone" placeholder="999-999-9999" name="phoneInput" disabled={disabled} onChange={this.props.inputChange} />
         <button
           type="submit"
-          id="button-submit"
-          onClick={this.handleClick}
+          id="buttonGeneral"
+          onClick={this.props.onClick}
         >
-          Submit Data
+          Submit General Data
         </button>
       </div>
     );

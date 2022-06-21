@@ -1,0 +1,25 @@
+#education-container {
+    display: flex; 
+    flex-direction: column; 
+    width: 200px; 
+    order: 1; 
+    margin-left: 20px; 
+}
+
+#label-major {
+    margin-top: 7px; 
+}
+
+#label-degree {
+    margin-top: 7px; 
+}
+
+#label-date {
+    margin-top: 7px; 
+}
+
+#buttonEducation {
+    width: 170px; 
+    margin: 0 auto; 
+    margin-top: 10px; 
+}
