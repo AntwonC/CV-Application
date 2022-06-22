@@ -9,6 +9,7 @@ import React, { Component } from 'react';
 import GeneralInformationSection from './components/GeneralInformation';
 import DisplayData from './components/DisplayData';
 import EducationInformation from './components/EducationInformation';
+import ExperienceInformation from './components/ExperienceInformation';
 import './styles/App.css';
 
 // eslint-disable-next-line react/prefer-stateless-function
@@ -24,10 +25,17 @@ class App extends Component {
       majorInput: '',
       degreeInput: '',
       dateOfStudyInput: '',
+      companyInput: '',
+      positionInput: '',
+      mainTasksInput: '',
+      dateStartInput: '',
+      dateEndedInput: '',
       buttonGeneral: false,
       buttonEducation: false,
+      buttonExperience: false,
       disableInputGeneral: false,
       disableInputEdu: false,
+      disableInputExp: false,
     };
   }
 
@@ -39,6 +47,11 @@ class App extends Component {
       this.setState(() => ({
         [e.target.id]: true,
         disableInputEdu: true,
+      }));
+    } else if (e.target.id === 'buttonExperience') {
+      this.setState(() => ({
+        [e.target.id]: true,
+        disableInputExp: true,
       }));
     } else {
       this.setState(() => ({
@@ -52,6 +65,10 @@ class App extends Component {
     if (evt.target.id === 'buttonEditGen') {
       this.setState(() => ({
         disableInputGeneral: false,
+      }));
+    } else if (evt.target.id === 'buttonEditExperience') {
+      this.setState(() => ({
+        disableInputExp: false,
       }));
     } else if (evt.target.id === 'buttonEditEdu') {
       this.setState(() => ({
@@ -81,6 +98,11 @@ class App extends Component {
           major={this.state.majorInput}
           degree={this.state.degreeInput}
           dateOfStudy={this.state.dateOfStudyInput}
+          company={this.state.companyInput}
+          position={this.state.positionInput}
+          mainTasks={this.state.mainTasksInput}
+          dateStart={this.state.dateStartInput}
+          dateEnd={this.state.dateEndedInput}
         />
       );
     }
@@ -105,6 +127,17 @@ class App extends Component {
             degree={this.state.degreeInput}
             dateOfStudy={this.state.dateOfStudyInput}
             disabled={this.state.disableInputEdu}
+          />
+          <ExperienceInformation
+            onClick={this.handleClick}
+            inputChange={this.handleInput}
+            editClicked={this.handleEditClick}
+            company={this.state.companyInput}
+            position={this.state.positionInput}
+            mainTasks={this.state.mainTasksInput}
+            dateStart={this.state.dateStartInput}
+            dateEnd={this.state.dateEndedInput}
+            disabled={this.state.disableInputExp}
           />
         </form>
         {display}

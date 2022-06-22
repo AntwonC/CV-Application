@@ -1,0 +1,49 @@
+#experience-Container {
+    display: flex; 
+    flex-direction: column; 
+    order: 2;
+    margin-left: 20px; 
+}
+
+#label-position {
+    margin-top: 10px; 
+}
+
+#label-mainTasks {
+    margin-top: 10px; 
+}
+
+#label-dateStart {
+    margin-top: 10px; 
+}
+
+#label-dateEnded {
+    margin-top: 10px; 
+}
+
+#buttonEditExperience {
+    width: 100px; 
+    height: 25px;
+    margin: 0 auto; 
+    margin-top: 10px; 
+    order: 1; 
+}
+
+#buttonExperience {
+    width: 150px; 
+    height: 25px; 
+    margin: 0 auto; 
+    margin-top: 10px; 
+    margin-right: 1px; 
+    font-size: 10px; 
+}
+
+#buttonExperienceContainer {
+    display: flex; 
+    width: 200px;
+}
+
+
+
+
+

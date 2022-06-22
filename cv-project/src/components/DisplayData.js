@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable react/prop-types */
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prefer-stateless-function */
@@ -7,7 +8,9 @@ import '../styles/DisplayData.css';
 class DisplayData extends Component {
   render() {
     const {
-      name, email, phone, school, major, degree, dateOfStudy,
+      name, email, phone, school,
+      major, degree, dateOfStudy,
+      company, position, mainTasks, dateStart, dateEnd,
     } = this.props;
     return (
       <div>
@@ -25,12 +28,23 @@ class DisplayData extends Component {
           </div>
           <div id="educationSection">
             {school}
-
+            {' '}
             {major}
-
+            {' '}
             {degree}
-
+            {' '}
             {dateOfStudy}
+          </div>
+          <div id="experienceSection">
+            {company}
+            {' '}
+            {position}
+            {' '}
+            {mainTasks}
+            {' '}
+            {dateStart}
+            {' '}
+            {dateEnd}
           </div>
         </div>
       </div>

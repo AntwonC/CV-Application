@@ -1,8 +1,13 @@
 #displayData {
-   
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: nowrap;
+    margin: 0 auto;
 }
 
 #nameGen {
     width: 200px; 
     background-color: blue; 
+    border: 5px solid yellow; 
+    font-size: 30px; 
 }
