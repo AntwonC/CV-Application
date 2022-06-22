@@ -21,13 +21,23 @@ class EducationInformation extends Component {
         <input type="text" id="degree" name="degreeInput" disabled={disabled} onChange={this.props.inputChange} />
         <label htmlFor="date" id="label-date">Date Finished</label>
         <input type="text" id="date" name="dateOfStudyInput" disabled={disabled} onChange={this.props.inputChange} />
-        <button
-          type="submit"
-          id="buttonEducation"
-          onClick={this.props.onClick}
-        >
-          Submit Education Data
-        </button>
+        <div id="button-Container">
+          <button
+            type="button"
+            id="buttonEditEdu"
+            onClick={this.props.editClicked}
+          >
+            Edit
+
+          </button>
+          <button
+            type="submit"
+            id="buttonEducation"
+            onClick={this.props.onClick}
+          >
+            Submit Education Data
+          </button>
+        </div>
       </div>
     );
   }

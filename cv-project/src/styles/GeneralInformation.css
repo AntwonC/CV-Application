@@ -22,5 +22,15 @@
 #buttonGeneral {
     width: 150px; 
     margin: 0 auto; 
+    margin-top: 10px;
+    margin-right: 1px; 
+    font-size: 10px;  
+}
+
+#buttonEditGen {
+    width: 100px; 
+    height: 25px; 
+    margin: 0 auto; 
     margin-top: 10px; 
+    order: 1;
 }

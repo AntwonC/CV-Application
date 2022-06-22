@@ -2,6 +2,7 @@
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
+import '../styles/DisplayData.css';
 
 class DisplayData extends Component {
   render() {
@@ -11,19 +12,26 @@ class DisplayData extends Component {
     return (
       <div>
         <div id="displayData">
-          {name}
-          {' '}
-          {email}
-          {' '}
-          {phone}
-          {' '}
-          {school}
-          {' '}
-          {major}
-          {' '}
-          {degree}
-          {' '}
-          {dateOfStudy}
+          <div id="generalSection">
+            <div id="nameGen">
+              {' '}
+              {name}
+              {' '}
+            </div>
+            {' '}
+            {email}
+            {' '}
+            {phone}
+          </div>
+          <div id="educationSection">
+            {school}
+
+            {major}
+
+            {degree}
+
+            {dateOfStudy}
+          </div>
         </div>
       </div>
     );

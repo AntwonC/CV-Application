@@ -36,21 +36,28 @@ class App extends Component {
 
     // console.log('Submitted data!');
     if (e.target.id === 'buttonEducation') {
-      this.setState((prevState) => ({
-        disableInputEdu: !prevState.disableInputEdu,
+      this.setState(() => ({
+        [e.target.id]: true,
+        disableInputEdu: true,
       }));
     } else {
-      this.setState((prevState) => ({
+      this.setState(() => ({
         [e.target.id]: true,
-        disableInputGeneral: !prevState.disableInputGeneral,
+        disableInputGeneral: true,
       }));
     }
+  };
 
-  /*  setTimeout(() => {
-      this.setState((prevState) => ({
-        submitButton: !prevState.submitButton,
+  handleEditClick = (evt) => {
+    if (evt.target.id === 'buttonEditGen') {
+      this.setState(() => ({
+        disableInputGeneral: false,
       }));
-    }, 1000); */
+    } else if (evt.target.id === 'buttonEditEdu') {
+      this.setState(() => ({
+        disableInputEdu: false,
+      }));
+    }
   };
 
   handleInput = (evt) => {
@@ -83,6 +90,7 @@ class App extends Component {
           <GeneralInformationSection
             onClick={this.handleClick}
             inputChange={this.handleInput}
+            editClicked={this.handleEditClick}
             name={this.state.nameInput}
             email={this.state.emailInput}
             phone={this.state.phoneInput}
@@ -91,6 +99,7 @@ class App extends Component {
           <EducationInformation
             onClick={this.handleClick}
             inputChange={this.handleInput}
+            editClicked={this.handleEditClick}
             school={this.state.schoolInput}
             major={this.state.majorInput}
             degree={this.state.degreeInput}

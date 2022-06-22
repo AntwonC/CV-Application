@@ -19,7 +19,23 @@
 }
 
 #buttonEducation {
-    width: 170px; 
+    width: 150px; 
+    height: 25px; 
     margin: 0 auto; 
     margin-top: 10px; 
+    margin-right: 1px; 
+    font-size: 10px;   
+}
+
+#buttonEditEdu {
+    width: 100px; 
+    height: 25px;
+    margin: 0 auto; 
+    margin-top: 10px; 
+    order: 1; 
+}
+
+#button-Container {
+    display: flex; 
+    width: 200px; 
 }
