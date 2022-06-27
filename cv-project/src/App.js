@@ -87,8 +87,9 @@ class App extends Component {
   render() {
     const buttonClicked = this.state.buttonGeneral;
     const educationButtonClicked = this.state.buttonEducation;
+    const experienceButtonClicked = this.state.buttonExperience;
     let display;
-    if (buttonClicked && educationButtonClicked) {
+    if (buttonClicked && educationButtonClicked && experienceButtonClicked) {
       display = (
         <DisplayData
           name={this.state.nameInput}
