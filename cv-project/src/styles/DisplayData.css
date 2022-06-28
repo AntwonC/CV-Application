@@ -10,5 +10,20 @@
     font-size: 20px; 
 }
 
+#generalSection {
+    border: 1px solid blue; 
+    width: 240px; 
+    margin-bottom: 10px; 
+}
+
+#educationSection {
+    border: 1px solid red; 
+    margin-bottom: 10px; 
+}
+
+#experienceSection {
+    border: 1px solid yellow; 
+    margin-top: 10px; 
+}
 
 
