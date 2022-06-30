@@ -1,3 +1,6 @@
+/* eslint-disable max-len */
+/* eslint-disable react/function-component-definition */
+/* eslint-disable react/prefer-stateless-function */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 /* eslint-disable spaced-comment */
@@ -6,11 +9,48 @@
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/no-unused-state */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { Component } from 'react';
+
+import React, { useState, useEffect } from 'react';
+//import React, { Component } from 'react';
 import '../styles/GeneralInformation.css';
 
 // eslint-disable-next-line react/prefer-stateless-function
-class GeneralInformationSection extends Component {
+const GeneralInformation = (props) => {
+  const {
+    name, email, phone, disabled,
+  } = props;
+
+  return (
+    <div id="container">
+      <label htmlFor="name" id="label-name">Full Name</label>
+      <input type="text" id="name" name="nameInput" disabled={disabled} onChange={props.inputChange} />
+      <label htmlFor="email" id="label-email">Email</label>
+      <input type="email" id="email" placeholder="placeholder@gmail.com" name="emailInput" disabled={disabled} onChange={props.inputChange} />
+      <label htmlFor="phone" id="label-phone">Phone</label>
+      <input type="tel" id="phone" placeholder="999-999-9999" name="phoneInput" disabled={disabled} onChange={props.inputChange} />
+      <div id="button-Container">
+        <button
+          type="button"
+          id="buttonEditGen"
+          onClick={props.editClicked}
+        >
+          Edit
+
+        </button>
+        <button
+          type="submit"
+          id="buttonGeneral"
+          onClick={props.onClick}
+        >
+          Submit General Data
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default GeneralInformation;
+/*class GeneralInformationSection extends Component {
   // eslint-disable-next-line class-methods-use-this
 
   render() {
@@ -48,4 +88,4 @@ class GeneralInformationSection extends Component {
   }
 }
 
-export default GeneralInformationSection;
+export default GeneralInformationSection;*/
